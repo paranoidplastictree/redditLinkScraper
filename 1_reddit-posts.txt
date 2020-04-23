@@ -1,0 +1,290 @@
+{
+    "data": [
+        {
+            "author": "mm_1984",
+            "created_utc": 1587371126,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/g4p001/two_pages_with_same_title_summer_night_bug/",
+            "id": "g4p001",
+            "selftext": "I find it confusing that two pages have the same title. Both are called Summer Night\n\n[https://mynoise.net/NoiseMachines/ultrasonicNoiseGenerator.php](https://mynoise.net/NoiseMachines/ultrasonicNoiseGenerator.php)\n\n[https://mynoise.net/NoiseMachines/magicLocustsGenerator.php](https://mynoise.net/NoiseMachines/magicLocustsGenerator.php)\n\n&amp;#x200B;\n\n&amp;#x200B;\n\n*Processing img k7fi82apnxt41...*\n\nAnd\n\n&amp;#x200B;\n\n*Processing img ok8srgernxt41...*",
+            "title": "Two pages with same title: Summer Night - Bug?"
+        },
+        {
+            "author": "thenoblea",
+            "created_utc": 1587073585,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/g2oflg/whats_the_best_sound_to_cover_my_neighbors_bass/",
+            "id": "g2oflg",
+            "selftext": "Hi guys, just recently started using mynoise, as the quarantine has made it so my neighbors are home playing music all day. I've been using brown noise and it seems to work pretty well, but I'm curious if someone has other suggestions to cover up the bumping bass? It's really starting to drive me crazy. Thanks!",
+            "title": "What's the best sound to cover my neighbor's bass?"
+        },
+        {
+            "author": "sedatedhorse",
+            "created_utc": 1587055756,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/g2im0a/storage_location/",
+            "id": "g2im0a",
+            "selftext": "Hi, how can one save to SD-card on mobile?",
+            "title": "Storage location"
+        },
+        {
+            "author": "uddhacca-sekkha",
+            "created_utc": 1586854211,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/g120pq/feedback_on_zen_radio/",
+            "id": "g120pq",
+            "selftext": "There is one track that is way louder than all the others, and is very intrusive, it is the Into Balance track, the singing voices are much higher volume/much more piercing than everything else that comes thorugh, and I always have to turn it down or off once it comes on, as it ruins the zen vibe.",
+            "title": "Feedback on Zen radio"
+        },
+        {
+            "author": "looksnormal",
+            "created_utc": 1586790645,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/g0krps/cryogenic_sleep_among_the_stars/",
+            "id": "g0krps",
+            "selftext": "In a pod that sails among the twinkling stars, you sleep deeply, suspended in a womb of life-giving fluid. Some part of you is aware you're on this journey, almost watching yourself from outside, but you don't really *think*. You just drift through observations and sink further into your subconscious. [Cryogenic sleep among the stars](https://mynoise.net/superGenerator.php?g1=guitarMashupMusicGenerator.php%3Fc%3D3%26c%3D3&amp;g2=50HzFishTankNoiseGenerator.php%3Fc%3D3%26c%3D3&amp;g3=dudukSoundGenerator.php%3Fc%3D3%26c%3D3&amp;g4=peakNoiseGenerator.php%3Fc%3D3%26c%3D3&amp;g5=koshiChimesGenerator.php%3Fc%3D3%26c%3D3&amp;yt=).\n\nGenerators: Guitar Mashup, Fish Tank, Duduk Song, Peak Noise, Mournful Chimes",
+            "title": "Cryogenic sleep among the stars"
+        },
+        {
+            "author": "StrixCZ",
+            "created_utc": 1586746564,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/g0agd6/rain_trance_the_shamanic_way/",
+            "id": "g0agd6",
+            "selftext": "^(Drums, throat singing and rain in the middle of a rainforest.)\n\nThis is an [**update**](https://mynoise.net/superGenerator.php?g1=cinematicEasternSoundscapeGenerator.php%3Fc%3D1%26l%3D45554500000000000000%26a%3D1%26am%3D2%26m%3D%26d%3D-10&amp;g2=throatSingingDroneGenerator.php%3Fc%3D1%26l%3D20304040454040403525%26a%3D2%26am%3D1%26m%3D%26d%3D-3&amp;g3=rainforestNoiseGenerator.php%3Fc%3D1%26l%3D00303010101015150000%26a%3D2%26am%3D1%26m%3D%26d%3D0&amp;g4=whiteRainNoiseGenerator.php%3Fc%3D1%26l%3D00202020203030304040%26a%3D2%26am%3D6%26m%3D%26d%3D0&amp;g5=&amp;yt=) of one the first myNoise SuperGens I've ever created. Why? Because now that I've learned some new tricks, I've been able to execute the simple yet powerful concept I've had in mind much better than before. The most important change are the drums - while the *African Trance* (which I originally used) is a very good and versatile generator, it didn't really allow me to set the exact mood I was going for - I just settled for it back then due to lack of options when it comes to drum generators on myNoise. I knew, of course, about the beautiful taiko drum loop from *Cinematic East* (one of my favorite soundscapes on myNoise!) but it was just too fast and frenetic for the \"focused but relaxed\" state of mind that I had been trying to induce with this generator...\n\nWhat I didn't know was that I could have used note transposition to slow it down - which is exactly what I did now - and it makes all the difference!\n\nI used the same thing to alter the throat singing drone a little (achieving deeper and better sound IMO) and I also replaced the rain generator and added some subtle rainforest ambience. All in all, now it sounds the way I wanted it to sound from the start! :)\n\nP.S.: Here's the [**old version**](https://mynoise.net/superGenerator.php?g1=polyrhythmBeatGenerator.php%3Fc%3D1%26l%3D40205560004000000000%26a%3D1%26am%3D7%26m%3D%26d%3D0&amp;g2=throatSingingDroneGenerator.php%3Fc%3D1%26l%3D18304147504744403327%26a%3D1%26am%3D1%26m%3D%26d%3D0&amp;g3=rainNoiseGenerator.php%3Fc%3D1%26l%3D22130912263549514132%26a%3D1%26am%3D2%26m%3D%26d%3D0&amp;g4=&amp;g5=&amp;yt=) for anyone interested.",
+            "title": "Rain Trance - The Shamanic Way"
+        },
+        {
+            "author": "OxidationActs874",
+            "created_utc": 1586642477,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fzk21e/looking_for_sound_that_will_help_with_studying/",
+            "id": "fzk21e",
+            "selftext": "What sound(s) do you use for studying?",
+            "title": "Looking for sound that will help with studying?"
+        },
+        {
+            "author": "StrixCZ",
+            "created_utc": 1586627878,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fzbtp4/seaside_meditation/",
+            "id": "fzbtp4",
+            "selftext": "You're watching waves crashing on a secluded beach - and suddenly you feel like there's a slowly unfolding melody [**coming into your mind**](https://mynoise.net/superGenerator.php?g1=darkAmbientGuitarSoundscape.php%3Fc%3D1%26l%3D35455050505050505025%26a%3D2%26am%3D1%26m%3D%26d%3D0&amp;g2=slowMotionSequenceGenerator.php%3Fc%3D1%26l%3D25354040004040404040%26a%3D1%26am%3D3%26m%3D%26d%3D0&amp;g3=custom.php%3Fl%3D00000000051525354555%26a%3D2%26am%3D6%26m%3DIRISHCOAST1~IRISHCOAST5~IRISHCOAST7~PENINSULA8~PENINSULA9~OCEAN5~OCEAN6~HARBOR4~HARBOR5~HARBOR7%26title%3DSea%2520Shore%26c%3D3&amp;g4=custom.php%3Fl%3D30304040404040403040%26a%3D2%26am%3D3%26m%3DENLIA0~ENLIA1~ENLIA2~ENLIA3~ENLIA6~ENLIA7~EASTASIA4~EASTASIA5~EASTASIA8~PANFLUTE8%26title%3DVocals%2520and%2520Instruments%26c%3D3&amp;yt=), accompanied by a gentle woman's voice. A flock of scavenging seagulls flies over your head. You close your eyes and let your thoughts drift away...",
+            "title": "Seaside Meditation"
+        },
+        {
+            "author": "acepenterbig42",
+            "created_utc": 1586402722,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fxky01/do_you_use_the_meditation_audios_for_subliminals/",
+            "id": "fxky01",
+            "selftext": "Sorry if the post is lazily posted, i have no idea for a self body.",
+            "title": "Do you use the meditation audios for subliminals?"
+        },
+        {
+            "author": "StrixCZ",
+            "created_utc": 1586213085,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fw8r1s/mongolian_spirit/",
+            "id": "fw8r1s",
+            "selftext": "Ever since I found the *Wolf Totem* song by a mongolian rock-band called *The Hu*, I've been in love with its epic feeling. I find it to be one of the songs that are able to uplift and empower you, making you feel like you can conquer the world if you just try hard enough :) However, I usually get bored quite quickly when listening to the same song on repeat for extended time periods. Which is why I made [**THIS**](https://mynoise.net/superGenerator.php?g1=throatSingingDroneGenerator.php%3Fc%3D1%26l%3D40404040606035352525%26a%3D2%26am%3D5%26m%3D%26d%3D2&amp;g2=throatSingingDroneGenerator.php%3Fc%3D1%26l%3D55514743393531272319%26a%3D2%26am%3D5%26m%3D%26d%3D14&amp;g3=custom.php%3Fl%3D75757575757575757575%26a%3D2%26am%3D5%26m%3DTHUNDER3~THUNDER4~THUNDER5~THUNDER6~THUNDER7~THUNDER22~THUNDER23~THUNDER24~THUNDER25~THUNDER27%26title%3DThunderstorm%26c%3D3&amp;g4=zarinaKopyrinaVocalSoundscape.php%3Fc%3D1%26l%3D90906000000000600000%26a%3D2%26am%3D5%26m%3D%26d%3D2&amp;g5=custom.php%3Fl%3D50353550304040404040%26a%3D2%26am%3D5%26m%3DWOLVES3~WOLVES4~WOLVES5~WOLVES6~WOLVES7~RAIN25~RAIN26~RAIN27~RAIN28~RAIN29%26title%3DWolves%2520and%2520Rain%26c%3D3&amp;yt=) super generator to provide just enough randomized (yet perfectly fitting) ambiance to accompany the song. [**Play it along with the looped song**](https://www.infinitelooper.com/?v=jM8dCGIm6yc&amp;p=n#/75;375) in another tab (**make sure to set the video volume to about 50 % for best results!**) and enjoy your \"Genghis Khan experience\"! :)\n\nI put a lot of effort into this one, making sure that everything is in tune (you can't see it in the super generator but the 3 of the generators are using note transposition to D#) and getting the most of the 5 generators limit (2 of them are custom composite generators). Also, finding the way to loop the song nicely (so there would be no audible gap when going back to start) was a challenge but I think it works perfectly :) (I didn't want to rely on a YouTube video with the song already looped as these tend to get deleted due to copyright claims quite often.) Overal, I'm really happy with the result! :)",
+            "title": "Mongolian Spirit"
+        },
+        {
+            "author": "Sweet-Table",
+            "created_utc": 1585950189,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fuh62p/mature_woman_seeks_extra_income/",
+            "id": "fuh62p",
+            "selftext": "",
+            "title": "mature woman seeks extra income."
+        },
+        {
+            "author": "MarvTV7",
+            "created_utc": 1585824048,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/ftk5nk/alpha_omega_combined_with_twin_black_lodges/",
+            "id": "ftk5nk",
+            "selftext": "Maybe I'm late to the party noticing this, but if you combine Alpha Omega with Twin Black Lodges with all sliders near or lower than half, but at the same values, then animate them both using the subtle setting, this seems to make for a really engaging flow of fluid sound. I've slept to just these in combination the past few nights, and it's been really awesome, but I see the potential for adding more sound to this combo. There seems to be something faint that sounds like distant walking on something maybe slushy or metal, a crackling of beads or pebbles, and some kind of a windy element embedded into this combination already, so I could maybe imagine a bit of the fireplace generator, one of the wind or rain ones, the sky walker one, parts of Winter Walk or Polar Expedition, one of the running water or ocean generators, or even parts of the aircraft or that one whose name I can't remember off the top of my head that has the starship ambience going with this. The tonal quality of the initial combination has a lonely or serene feeling to it, so settings I've thought of so far have been a continuing voyage aboard a starship on a long or not urgent journey, an excursion using a spacesuit, either outside a starship or space station, or maybe being in temporary orbit of a planet, standing or sitting on a hostile or habitable planet with no life on it except for just you, flying in the skies of Earth or an imagined planet, barren rock, ice, or other landscape below, some kind of weather accompanying what ever it is one is doing on this planet... I'm glad I could share this, and I look forward to seeing where this initial start leads us in creating multi or supergens.",
+            "title": "Alpha Omega combined with Twin Black Lodges (Helping You)"
+        },
+        {
+            "author": "_AfterBurner0_",
+            "created_utc": 1585495250,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fr7gyp/adrift_beyond_deep_space/",
+            "id": "fr7gyp",
+            "selftext": "[Adrift Beyond Deep Space](https://mynoise.net/superGenerator.php?g1=darkAmbientGuitarSoundscape.php%3Fc%3D1%26l%3D35444744363350004137%26m%3D%26d%3D0&amp;g2=numberStationsRadioNoiseGenerator.php%3Fc%3D1%26l%3D52410029313800000000%26a%3D0.5%26am%3D2%26m%3D%26d%3D0&amp;g3=spaceshipNoiseGenerator.php%3Fc%3D1%26l%3D54555247000000005140%26a%3D0.5%26am%3D2%26m%3D%26d%3D0&amp;g4=dustyScratchedVinylNoiseGenerator.php%3Fc%3D1%26l%3D00000000002100251518%26a%3D0.5%26am%3D2%26m%3D%26d%3D0&amp;g5=&amp;yt=)  \n  \nYou and your team of scientists were on a research expedition far away in an uncharted nebula. You disembarked from the ship with a shuttlecraft to collect additional data within the nebula. Only a few minutes after launch, you watched your mothership's fusion core get struck by a bolt of atomic plasma lightning. The ship was shattered instantly. Within the blink of an eye, you became the only living human for the nearest 7 million light years.",
+            "title": "Adrift Beyond Deep Space"
+        },
+        {
+            "author": "_AfterBurner0_",
+            "created_utc": 1585494868,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fr7dg0/adrift_beyond_deep_space/",
+            "id": "fr7dg0",
+            "selftext": "`[Adrift Beyond Deep Space](https://mynoise.net/superGenerator.php?g1=darkAmbientGuitarSoundscape.php%3Fc%3D1%26l%3D35444744363350004137%26m%3D%26d%3D0&amp;g2=numberStationsRadioNoiseGenerator.php%3Fc%3D1%26l%3D52410029313800000000%26a%3D0.5%26am%3D2%26m%3D%26d%3D0&amp;g3=spaceshipNoiseGenerator.php%3Fc%3D1%26l%3D54555247000000005140%26a%3D0.5%26am%3D2%26m%3D%26d%3D0&amp;g4=dustyScratchedVinylNoiseGenerator.php%3Fc%3D1%26l%3D00000000002100251518%26a%3D0.5%26am%3D2%26m%3D%26d%3D0&amp;g5=&amp;yt=)`  \n  \nYou and your team of scientists were on a research expedition far away in an uncharted nebula. You disembarked from the ship with a shuttlecraft to collect additional data within the nebula. Only a few minutes after launch, you watched your mothership's fusion core get struck by a bolt of atomic plasma lightning. The ship was shattered instantly. Within the blink of an eye, you became the only living human for the nearest 7 million light years.",
+            "title": "Adrift Beyond Deep space"
+        },
+        {
+            "author": "stormyTheSea",
+            "created_utc": 1585258916,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fpkbfq/long_time_lurker_coming_out_of_the_shadows_to/",
+            "id": "fpkbfq",
+            "selftext": "",
+            "title": "Long time lurker coming out of the shadows to share my first post with you: a web app for searching/filtering mynoise supergens from the master list"
+        },
+        {
+            "author": "Vercingetorig",
+            "created_utc": 1585237990,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fpdvc2/lalas/",
+            "id": "fpdvc2",
+            "selftext": "",
+            "title": "Lalas"
+        },
+        {
+            "author": "Vercingetorig",
+            "created_utc": 1585065516,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fo7hhp/binaural_beat_and_electronic/",
+            "id": "fo7hhp",
+            "selftext": "",
+            "title": "Binaural Beat and Electronic"
+        }
+    ]
+}{
+    "data": [
+        {
+            "author": "audiosampling",
+            "created_utc": 1584735188,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fm1uv4/live_performance_starting_now/",
+            "id": "fm1uv4",
+            "selftext": "Live on [YouTube](https://youtu.be/LMV6h9xrFGY), in a couple of minutes!",
+            "title": "Live performance, starting now!"
+        },
+        {
+            "author": "Vercingetorig",
+            "created_utc": 1584568009,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fkxvvl/in_the_sky_over_the_desert/",
+            "id": "fkxvvl",
+            "selftext": "",
+            "title": "In the sky over the desert"
+        },
+        {
+            "author": "Vercingetorig",
+            "created_utc": 1584304204,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fj7yr4/singing_piano_and_saturn/",
+            "id": "fj7yr4",
+            "selftext": "",
+            "title": "singing, piano and saturn"
+        },
+        {
+            "author": "sigill",
+            "created_utc": 1584019267,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fhg8am/desperate_for_mobile_app/",
+            "id": "fhg8am",
+            "selftext": "I'm sad because of the limited mobile app. I desperately need a multi-drone option on mobile devices.  Your work is divine and it deserves to be carried throughout the day, not only sitting near a workstation. Will it be someday?",
+            "title": "Desperate for mobile app"
+        },
+        {
+            "author": "Gregory-76",
+            "created_utc": 1583998605,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fhcoga/why_arent_all_the_generators_in_app/",
+            "id": "fhcoga",
+            "selftext": "There are a lot more generators on the website, not available in the app. I primarily use my iPhone &amp; iPad and don\u2019t have a computer, will these ever become available in app? If not, why? \n\nCan\u2019t play sounds on the website and browse Instagram or whatever on my phone, it stops playing when I leave Safari. *space gazer, electric sheep* and more I\u2019d love to see.",
+            "title": "why aren\u2019t all the generators in app?"
+        },
+        {
+            "author": "NSMustache",
+            "created_utc": 1583944056,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fgzupp/mynoise_live_sessions_now_broadcasting/",
+            "id": "fgzupp",
+            "selftext": "",
+            "title": "myNoise Live Sessions [now broadcasting]"
+        },
+        {
+            "author": "Gemini_Wolf",
+            "created_utc": 1583283350,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fd4uo0/a_few_questions/",
+            "id": "fd4uo0",
+            "selftext": "When was the android app last updated?\n\nAnd what sampling rate and bit depth are these sounds recorded at?\n\nAnd what is the bitrate of the final sounds?",
+            "title": "A few questions"
+        },
+        {
+            "author": "PravyINTP",
+            "created_utc": 1583255676,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/fcxt9s/suggestion/",
+            "id": "fcxt9s",
+            "selftext": "Would it be possible to add a button witch would play a random generator? I think it would be fun.   \nThanks, I love the site.",
+            "title": "suggestion -"
+        },
+        {
+            "author": "pepejknoutsin",
+            "created_utc": 1582655971,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/f9eus0/la_2049_blade_runner_with_rain_and_machines/",
+            "id": "f9eus0",
+            "selftext": "",
+            "title": "LA 2049 - Blade Runner with rain and machines"
+        },
+        {
+            "author": "cold-flame",
+            "created_utc": 1582362127,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/f7q63c/do_i_need_to_manually_bring_down_each_slider_to/",
+            "id": "f7q63c",
+            "selftext": "'J' shortcut works to bring down all the sliders together, but for some reason they don't get to absolute zero. If I press 'C' to collect the non-zero slider for my custom generator, it would pick up all of them as they were not at absolute zero. \n\nIt would be a lot easier to create a custom generator if I can bring down all sliders to zero quickly using a shortcut.",
+            "title": "Do I need to manually bring down each slider to get them to 'zero'?"
+        }
+    ]
+}{
+    "data": [
+        {
+            "author": "WildYarnDreams",
+            "created_utc": 1581948442,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/f597e0/suggestion_dishwasher_noise/",
+            "id": "f597e0",
+            "selftext": "I wrote most of my thesis at a dinner table and often the dishwasher would be running, and the low rumbles of it make for such a warm homey background sound. Can I submit that as a suggestion for a future mynoise?",
+            "title": "Suggestion: dishwasher noise"
+        },
+        {
+            "author": "dwhiffing",
+            "created_utc": 1581351733,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/f1smmr/all_noises_will_begin_to_produce_skip_sounds/",
+            "id": "f1smmr",
+            "selftext": "I was able to find references to this issue about 9 months ago on this sub, but I've been experiencing this issue on and off for the past couple of months.  I've ruled out my hardware, as it happens on my phone with earbuds, my macbook with headphones, and my desktop with speakers, all of them produce the same anomaly.\n\nI've tried a variety of things related to ensuring the browser isn't put into an idle mode.  I've tried different browsers.  I'm not sure what else to try, it kind of ruins the experience when there are clicks and skips in the middle of every noise. I'm trying some static exported recordings using my credits to see if it happens there.\n\nDoes anyone else experience this?  Chrome is my primary, but also hear it in Firefox. Thanks for any insight anyone can offer.",
+            "title": "All noises will begin to produce \"skip\" sounds periodically"
+        },
+        {
+            "author": "JustJoely",
+            "created_utc": 1581060834,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/f077gc/basketball_practice_sounds/",
+            "id": "f077gc",
+            "selftext": "So, I recently figured out that I get a lot of quality writing and editing done while my 9-year-old dinks around at basketball practice at the community center gym. Something about the echoey space, the sneaker squeaks, occasional swoosh,, the mumbly laughter. NO buzzer timers, no audience sounds, just a low-level, almost aquatic-sounding wash that puts my internal critic to sleep and makes my writing mind float to the top.",
+            "title": "Basketball practice sounds"
+        },
+        {
+            "author": "arms_the_mirror",
+            "created_utc": 1581020058,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/ezy8n9/bike_race/",
+            "id": "ezy8n9",
+            "selftext": "I don't have the means, but someone should mount a mic on their bike and go for a long, fast ride on some curvy and hilly terrain.",
+            "title": "Bike race"
+        },
+        {
+            "author": "HighHouseLife",
+            "created_utc": 1580644920,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/exnhgp/i_just_found_out_about_this_community_and_i_got/",
+            "id": "exnhgp",
+            "selftext": "I have very loud neighbours and figured this noise will help me go through difficult days. I usually plug in an external hard drive in my smart tv and it does the job. \n\nQuestions:\n\n* Are these files for free - if this is the case can you torrent it somewhere?\n* It isn't free - which tracks do you recommend and where should i buy them?\n\nCheers",
+            "title": "I just found out about this community and i got questions."
+        },
+        {
+            "author": "ChuckUSA",
+            "created_utc": 1580515906,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/ewxmie/contribution_issue/",
+            "id": "ewxmie",
+            "selftext": "I donate, but it's not correctly entered. The last donation I made, was about 2 months ago, but it states it was 484 days ago. Happened before too?",
+            "title": "Contribution Issue"
+        },
+        {
+            "author": "JewsusKid",
+            "created_utc": 1580183010,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/ev009f/bad_storm_for_android/",
+            "id": "ev009f",
+            "selftext": "Hey can you guys put bad storm in the android app I would love it\nThank you",
+            "title": "Bad storm for android"
+        },
+        {
+            "author": "ADHDCuriosity",
+            "created_utc": 1579813558,
+            "full_link": "https://www.reddit.com/r/MyNoise/comments/eszfs4/streamside_dreams_of_sky_rings/",
+            "id": "eszfs4",
+            "selftext": "[SuperGen](https://mynoise.net/superGenerator.php?g1=rainyRiverbankSoundscapeGenerator.php%3Fl%3D00113722050722390008%26a%3D0.5%26am%3D2%26m%3D%26d%3D0%26c%3D3&amp;g2=huuVocalSoundscape.php%3Fl%3D09231111121204000009%26a%3D4%26am%3D3%26m%3D%26d%3D0%26c%3D3&amp;g3=elGreyVocalSoundscape.php%3Fl%3D11000014180808190000%26a%3D4%26am%3D3%26m%3D%26d%3D0%26c%3D3&amp;g4=&amp;g5=&amp;yt=)\n\nGrowing tired of simply playing white noise to sleep, I decided to fiddle around with different generators. I've been sleeping to this specific configuration the past three nights.\n\nThis combination of [Rainy Riverbank](https://mynoise.net/NoiseMachines/rainyRiverbankSoundscapeGenerator.php?l=00113722050722390008&amp;a=0.5&amp;am=2&amp;m=&amp;d=0), [Huu Chant](https://mynoise.net/NoiseMachines/huuVocalSoundscape.php?l=09231111121204000009&amp;a=4&amp;am=3&amp;m=&amp;d=0), and [Into Balance](https://mynoise.net/NoiseMachines/elGreyVocalSoundscape.php?l=11000014180808190000&amp;a=4&amp;am=3&amp;m=&amp;d=0) may or may not evoke a similar feeling to the opening theme of a certain space-themed video game.\n\nRest well, Spartans.",
+            "title": "Streamside Dreams of Sky Rings"
+        }
+    ]
+}
