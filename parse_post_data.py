@@ -22,20 +22,39 @@ def get_supergen(post, title, url, noise_machines):
     }
 
 def get_noise_machines(url):
-    return ()
-    # python parse url, domain, QS
-    # https://mynoise.net/superGenerator.php?g1=binauralBrainwaveGenerator.php?c%3D3%26l%3D50464238343027242118&g2=twilightSoundscapeGenerator.php?c%3D3%26l%3D70500000353500000050&g3=windchimesGenerator.php?c%3D3%26l%3D00171423000038516762&g4=cabinNoiseGenerator.php?c%3D3%26l%3D80664570170000000000&g5
-    # todo: does it begin with http(s)://mynoise.net/superGenerator.php
-    # todo: does it have at least 2 supergens
+    noise_gens = []
+    o = urlparse(url)
+    if o.netloc != "mynoise.net":
+        return []
+    qs = parse_qsl(o.query)
+    for param in qs:
+        match = re.search(".+\.php", param[1])
+        if match:
+            noise_gens.append(match.group())
+    return noise_gens
 
 def parse_self_post(submission):
-    self_text = submission["selftext"]
-    # todo: parse self_text:
-    # --> some may have more than one valid supergen url
-    # --> some may not have link text
+    # TODO: Verify if any self-posts contain links that are NOT prefaced with "[some attempt at a title]""
+    url_pattern = "http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\), ]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+    text_url_pattern = r"(?i)(?<=\[)[^\]]+\]\(http[s]?://mynoise.net/supergenerator\.php[^\)]+(?=\))"
+    post_title = submission["title"]
+    reddit_link = submission["full_link"]
+    created_utc = submission["created_utc"]
+    matches = re.findall(text_url_pattern, submission["selftext"])
+    matchCount = len(matches)
+    for idx, match in enumerate(matches):
+        matchPair = match.split("](")
+        title = matchPair[0] if matchCount == 1 else "{} {}".format(matchPair[0], str(idx + 1))
+        url = matchPair[1]
+        noise_machines = get_noise_machines(url)
+        # todo: parse self_text:
+        # [x] some may have more than one valid supergen url
+        # [ ] some may not have link text
 
 def parse_link(submission):
     noise_machines = get_noise_machines(submission["url"])
+    if len(noise_machines) < 2:
+        return
     supergen = get_supergen(submission, submission["title"], submission["url"], noise_machines])
     supergen_posts.append(supergen)
 
