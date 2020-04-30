@@ -21,17 +21,6 @@ def get_supergen(post, title, url, noise_machines):
         "noise_machines": noise_machines
     }
 
-def get_noise_machines(url):
-    noise_gens = []
-    o = urlparse(url)
-    if o.netloc != "mynoise.net":
-        return []
-    qs = parse_qsl(o.query)
-    for param in qs:
-        match = re.search(".+\.php", param[1])
-        if match:
-            noise_gens.append(match.group())
-    return noise_gens
 
 def parse_self_post(submission):
     # TODO: Verify if any self-posts contain links that are NOT prefaced with "[some attempt at a title]""
