@@ -1,9 +1,18 @@
+##########################################################################################
+# file: get_pushshift.py
+# Requests all r/mynoise posts from pushshift.py, starting with most recent
+# TODO: Check date or post Id of last scrape performed to prevent unnecessary re-scraping
+##########################################################################################
+
+import os
 import requests
 import json
 import time
 import datetime
 from datetime import timedelta
 
+script_dir = os.path.dirname(__file__)
+rel_output_path = '/data/redditPostData'
 FIRST_POST_CREATED_UTC = 1407254907 # 08/05/2014 @ 4:08pm (UTC)
 MONTH_IN_SECONDS = 2678400
 TIME_SPAN = 12 * MONTH_IN_SECONDS
@@ -11,7 +20,8 @@ TIME_SPAN = 12 * MONTH_IN_SECONDS
 def append_to_file(start_utc, end_utc, data):
     file_name_format = "{}_{}.json"
     file_name = file_name_format.format(start_utc, end_utc)
-    f = open(file_name, "a")
+    path = os.path.join(script_dir, rel_output_path, file_name)
+    f = open(path, "a")
     f.write(data)
     f.close()
 
