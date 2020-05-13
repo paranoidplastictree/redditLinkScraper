@@ -47,7 +47,7 @@ class NoiseMachineService:
         return noise_gens
     
     def get_noise_machines(self, url):
-        nms = []
+        supergen_nms = []
         noise_machine_names = self.__parse_noise_machines_from_url(url)
         for noise_machine_name in noise_machine_names:
             if noise_machine_name not in self.__noise_machines:
@@ -56,5 +56,5 @@ class NoiseMachineService:
             else:
                 nm = self.__noise_machines[noise_machine_name]
                 if (nm):
-                    nms.append({nm})
-        return nms
+                    supergen_nms.append({nm})
+        return supergen_nms

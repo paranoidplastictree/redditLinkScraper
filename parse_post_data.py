@@ -1,7 +1,7 @@
 ##########################################################################################
 # file: parse_post_data.py
-# 1. Parses posts and links gathered via get_pushshift.py
-# 2. Performs noise machine info lookup for each link found
+# 1. Parses reddit posts and links gathered via get_pushshift.py
+# 2. Performs noise machine info lookup for each link found (posts have 0 or more links)
 # 3. Creates supergen meta and saves to file
 #
 # TODO:
@@ -9,7 +9,6 @@
 # > Save supergens to file
 # > Check date or post Id of last scrape performed to prevent unnecessary re-scraping
 ##########################################################################################
-
 import os
 import json
 import time
@@ -20,13 +19,14 @@ import modules.logger as logger
 from classes.NoiseMachineService import NoiseMachineService
 
 script_dir = os.path.dirname(__file__)
-rel_input_path = '/redditPostData'
+rel_input_path = '/data/redditPostData'
+required_nm_per_supergen = 2
 supergen_posts = []
 nm_svc = NoiseMachineService()
 
 def __get_supergen(post, title, url, noise_machines):
-    if len(noise_machines) < 2:
-        print("Not enough noise machines")
+    if len(noise_machines) < required_nm_per_supergen:
+        print("Not enough noise machines for post_id " + str(post["id"]))
         return
 
     return {
@@ -75,8 +75,6 @@ def __parse_self_post(submission):
 
 def __parse_link(submission):
     noise_machines = nm_svc.get_noise_machines(submission["url"])
-    if len(noise_machines) < 2:
-        return
     supergen = __get_supergen(submission, submission["title"], submission["url"], noise_machines)
     supergen_posts.append(supergen)
 
@@ -85,8 +83,8 @@ def __parse_submissions(data):
         if submission["is_self"]: __parse_self_post(submission)
         else: __parse_link(submission)
 
-def processFiles():
-    # path = "c:/dev/redditLinkScraper/redditPostData/"
+def __ingest_files():
+    # path = "c:/dev/redditLinkScraper/data/redditPostData/"
     path = os.path.join(script_dir, rel_input_path)
     for filename in os.listdir(path):
         if filename.endswith(".json") == False: continue
@@ -95,12 +93,22 @@ def processFiles():
         f.close()
         __parse_submissions(data)
 
-# processFiles()
-def processFile():
+def __ingest_file():
     f = open("c:/dev/redditLinkScraper/test.json")
     data = json.load(f)
     f.close()
     __parse_submissions(data)
     print("fin")
 
-processFile()
+def __try_write_supergens():
+    if len(supergen_posts) == 0: return False
+    file_name = "supergens.json"
+    path = os.path.join(script_dir, "/data/output", file_name)
+    with open(path, 'wb') as outfile:
+        json.dump(supergen_posts, outfile)
+    return True
+
+def main():
+    __ingest_file()
+    __try_write_supergens()
+    print("fin")
