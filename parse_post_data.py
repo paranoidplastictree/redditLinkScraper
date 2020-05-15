@@ -7,108 +7,72 @@
 # TODO:
 # > regex pattern for links without link text
 # > Save supergens to file
-# > Check date or post Id of last scrape performed to prevent unnecessary re-scraping
+# > Load paths and file names from a config module
 ##########################################################################################
 import os
-import json
-import time
-import datetime
-import re
-from datetime import timedelta
-import modules.logger as logger
-from classes.NoiseMachineService import NoiseMachineService
+import modules.fileIO as io
+import modules.regexer as regex
+from classes.SupergenService import SupergenService
 
 script_dir = os.path.dirname(__file__)
 rel_input_path = '/data/redditPostData'
-required_nm_per_supergen = 2
-supergen_posts = []
-nm_svc = NoiseMachineService()
+rel_output_path = '/data/output'
+post_input_path = os.path.join(script_dir, rel_input_path)
+output_path = os.path.join(script_dir, rel_output_path)
+sg_svc = SupergenService(output_path)
 
-def __get_supergen(post, title, url, noise_machines):
-    if len(noise_machines) < required_nm_per_supergen:
-        print("Not enough noise machines for post_id " + str(post["id"]))
-        return
+def __add_titled_match(match, submission):
+    match_pair = match.split("](")
+    title = match_pair[0]
+    url = match_pair[1]
+    sg_svc.add(submission, title, url)
 
-    return {
-        "post_id": post["id"],
-        "author": post["author"],
-        "created_utc": post["created_utc"],
-        "reddit_url": post["full_link"],
-        "url": url,
-        "title": title,
-        "noise_machines": noise_machines
-    }
+def __parse_titled_matches(submission):
+    # TODO: Verify if any self-posts contain links that are NOT prefaced with "[some attempt at a title]""
+    # some posts may have more than one valid supergen url, add each of them
+    titled_matches = regex.find_all_titled_links(submission["selftext"])
+    for titled_match in enumerate(titled_matches):
+        __add_titled_match(titled_match, submission)
 
-def __try_add_supergen(post, title, url):
-    noise_machines = nm_svc.get_noise_machines(url)
-    supergen = __get_supergen(post, title, url, noise_machines)
-    if (supergen):
-        supergen_posts.append(supergen)
-        return True
-    else:
-        logger.error("Failed to build supergen")
-        return False
+def __add_untitled_url(url, submission, index, match_count):
+    is_single = len(match_count) == 1
+    post_title = submission["title"]
+    link_title = post_title if is_single else "{} {}".format(post_title, str(index + 1))
+    sg_svc.add(submission, link_title, url)
+
+def __parse_untitled_matches(submission):
+    # TODO: create pattern to match links without link text
+    untitled_urls = regex.find_all_untitled_links(submission["selftext"])
+    match_count = len(untitled_urls)
+    for idx, untitled_url in enumerate(untitled_urls):
+        __add_untitled_url(untitled_url, submission, idx, match_count)
 
 def __parse_self_post(submission):
-    # TODO: Verify if any self-posts contain links that are NOT prefaced with "[some attempt at a title]""
-    # url_pattern = "http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\), ]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
-    # matches all occurrences of: [the-supergen-title](the-supergen_mynoise_url)
-    text_url_pattern = r"(?i)(?<=\[)[^\]]+\]\(http[s]?://mynoise.net/supergenerator\.php[^\)]+(?=\))"
-    matches = re.findall(text_url_pattern, submission["selftext"])
-    isSingleLink = len(matches) == 1
-
-    # some may have more than one valid supergen url
-    for match in enumerate(matches):
-        matchPair = match.split("](")
-        title = matchPair[0]
-        url = matchPair[1]
-        __try_add_supergen(submission, title, url)
-
-    # todo: create pattern to match links without link text
-    non_titled_url_pattern = r""
-    matches = re.findall(non_titled_url_pattern, submission["selftext"])
-    isSingleLink = len(matches) == 1
-    postTitle = submission["title"]
-    for idx, match in enumerate(matches):
-        linkTitle = postTitle if isSingleLink else "{} {}".format(postTitle, str(idx + 1))
-        __try_add_supergen(submission, linkTitle, match)
+    __parse_titled_matches(submission)
+    __parse_untitled_matches(submission)
 
 def __parse_link(submission):
-    noise_machines = nm_svc.get_noise_machines(submission["url"])
-    supergen = __get_supergen(submission, submission["title"], submission["url"], noise_machines)
-    supergen_posts.append(supergen)
+    sg_svc.add(submission, submission["title"], submission["url"])
 
 def __parse_submissions(data):
     for submission in data["data"]:
         if submission["is_self"]: __parse_self_post(submission)
         else: __parse_link(submission)
 
-def __ingest_files():
+def __process_files():
     # path = "c:/dev/redditLinkScraper/data/redditPostData/"
-    path = os.path.join(script_dir, rel_input_path)
-    for filename in os.listdir(path):
-        if filename.endswith(".json") == False: continue
-        f = open(filename)
-        data = json.loads(f)
-        f.close()
-        __parse_submissions(data)
+    file_names = io.list_dir(post_input_path)
+    for filename in file_names:
+        data = io.read_json(filename)
+        if (data): __parse_submissions(data)
 
-def __ingest_file():
-    f = open("c:/dev/redditLinkScraper/test.json")
-    data = json.load(f)
-    f.close()
-    __parse_submissions(data)
-    print("fin")
-
-def __try_write_supergens():
-    if len(supergen_posts) == 0: return False
-    file_name = "supergens.json"
-    path = os.path.join(script_dir, "/data/output", file_name)
-    with open(path, 'wb') as outfile:
-        json.dump(supergen_posts, outfile)
-    return True
+def __process_file():
+    data = io.read_json("c:/dev/redditLinkScraper/test.json")
+    if (data): __parse_submissions(data)
 
 def main():
-    __ingest_file()
-    __try_write_supergens()
+    __process_file()
+    sg_svc.save_all()
     print("fin")
+
+main()
