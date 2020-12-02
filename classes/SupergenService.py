@@ -4,8 +4,6 @@
 ##########################################################################################
 
 import os
-import modules.fileIO as io
-import modules.logger as logger
 from classes.NoiseMachineService import NoiseMachineService
 from classes.SupergenFactory import SupergenFactory
 from classes.SupergenRepository import SupergenRepository

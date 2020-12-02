@@ -6,13 +6,14 @@
 import modules.logger as logger
 import json
 
-
 class SupergenFactory:
     required_nm_per_supergen = 2
 
     def __validate_noise_machines(self, post_id, noise_machines):
         if len(noise_machines) < self.required_nm_per_supergen:
-            print("Not enough noise machines for post_id " + str(post_id))
+            msg = "Not enough noise machines for post_id " + str(post_id)
+            logger.warn(msg)
+            print(msg)
             return False
         return True
 

@@ -67,6 +67,6 @@ def get_all_submissions(start_utc):
 def main():
     start_seconds = int(time.time())
     get_all_submissions(start_seconds)
-    print('fin')
+    print('finished processing')
 
 main()

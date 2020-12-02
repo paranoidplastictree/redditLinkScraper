@@ -3,7 +3,7 @@
 # Collects, saves supergens. Acted upon by the SupergenService
 ##########################################################################################
 
-import modules.fileIO as io
+import modules.fileIO as fileIo
 import modules.logger as logger
 
 class SupergenRepository:
@@ -23,4 +23,4 @@ class SupergenRepository:
             return False
 
     def save_all(self):
-        return io.try_write_array(self.supergen_posts, self.output_path, self.output_filename)
+        return fileIo.try_write_array(self.supergen_posts, self.output_path, self.output_filename)

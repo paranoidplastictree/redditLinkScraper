@@ -11,7 +11,7 @@
 ##########################################################################################
 import os
 import modules.fileIO as io
-import modules.regexer as regex
+import modules.linkParser as linkParser
 from classes.SupergenService import SupergenService
 
 script_dir = os.path.dirname(__file__)
@@ -30,7 +30,7 @@ def __add_titled_match(match, submission):
 def __parse_titled_matches(submission):
     # TODO: Verify if any self-posts contain links that are NOT prefaced with "[some attempt at a title]""
     # some posts may have more than one valid supergen url, add each of them
-    titled_matches = regex.find_all_titled_links(submission["selftext"])
+    titled_matches = linkParser.find_all_titled_links(submission["selftext"])
     for titled_match in enumerate(titled_matches):
         __add_titled_match(titled_match, submission)
 
@@ -42,7 +42,7 @@ def __add_untitled_url(url, submission, index, match_count):
 
 def __parse_untitled_matches(submission):
     # TODO: create pattern to match links without link text
-    untitled_urls = regex.find_all_untitled_links(submission["selftext"])
+    untitled_urls = linkParser.find_all_untitled_links(submission["selftext"])
     match_count = len(untitled_urls)
     for idx, untitled_url in enumerate(untitled_urls):
         __add_untitled_url(untitled_url, submission, idx, match_count)
