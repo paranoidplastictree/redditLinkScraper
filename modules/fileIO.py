@@ -7,7 +7,7 @@ def list_dir(path):
 def read_json(file_name):
     if file_name.endswith(".json") == False: return False
     f = open(file_name)
-    data = json.loads(f)
+    data = json.load(f)
     f.close()
     return data
 
