@@ -16,14 +16,17 @@ from classes.SupergenService import SupergenService
 
 script_dir = os.path.dirname(__file__)
 rel_input_path = '/data/redditPostData'
-rel_output_path = '/data/output'
+rel_output_path = './data/output'
 post_input_path = os.path.join(script_dir, rel_input_path)
 output_path = os.path.join(script_dir, rel_output_path)
 sg_svc = SupergenService(output_path)
 
 def __add_titled_match(match, submission):
-    match_pair = match.split("](")
-    title = match_pair[0]
+    matchIndex = match[0]
+    title_url = match[1].replace("] (", "](")
+    title_url = title_url[1:-1] # remove first "[" and last ")" characters
+    match_pair = title_url.split("](")
+    title = match_pair[0] if matchIndex == 0 else match_pair[0] + " " + str(matchIndex)
     url = match_pair[1]
     sg_svc.add(submission, title, url)
 
@@ -49,7 +52,7 @@ def __parse_untitled_matches(submission):
 
 def __parse_self_post(submission):
     __parse_titled_matches(submission)
-    __parse_untitled_matches(submission)
+    #__parse_untitled_matches(submission)
 
 def __parse_link(submission):
     sg_svc.add(submission, submission["title"], submission["url"])

@@ -21,6 +21,10 @@ class SupergenService:
         
     def add(self, submission, title, url):
         noise_machines = nm_svc.get_noise_machines(url)
+        if len(noise_machines) < 2:
+            print(title)
+            print(url)
+            print(noise_machines)
         supergen = sg_factory.create(submission, title, url, noise_machines)
         self.sg_repo.try_add_supergen(supergen)
 
