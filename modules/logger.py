@@ -11,7 +11,7 @@ def info(message):
 
 def __log(level, message):
     now = datetime.now(timezone.utc).strftime("%c")
-    log_msg = "{} {}: {}".format(now, level, message)
+    log_msg = "{} {}: {}\n".format(now, level, message)
     
     file_name = "{}.log".format(datetime.now(timezone.utc).strftime("%Y_%m_%d"))
     f = open(file_name, "a")

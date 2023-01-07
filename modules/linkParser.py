@@ -14,7 +14,7 @@ def find_all_untitled_links(self_text):
     #non_titled_url_pattern = r"(?i)(?<!(\][ ]?\())http[s]?://mynoise.net/supergenerator\.php[^\)]+(?=\))"
     #non_titled_url_pattern = r"(?i)(?<!(\]+ ?)(\(?))http[s]?://mynoise.net/supergenerator\.php[^\)]+(?=\))"
     #non_titled_url_pattern = r"(?i)(?<!\] \(|\]\(|\])http[s]?://mynoise.net/supergenerator\.php[^\)]+(?=\))"
-    non_titled_url_pattern = r"((?i)(?<!\()http[s]?://mynoise.net/supergenerator\.php[^\)]+(?=\))\))"
+    non_titled_url_pattern = r"((?i)(?<!\()http[s]?://mynoise.net/supergenerator\.php[^\)]+)"
     
     matches = re.findall(non_titled_url_pattern, self_text)
     return matches

@@ -11,6 +11,7 @@ from urllib.parse import urlparse, parse_qsl
 
 # hydrated file is generated and hydrated by the supergen_scraper project
 ng_info_filename = "c:/dev/redditLinkScraper/data/noiseGeneratorInfo_hydrated.json"
+noise_machine_base_path = "https://mynoise.net/NoiseMachines/"
 
 class NoiseMachineService:
     __noise_machines = {}
@@ -37,10 +38,11 @@ class NoiseMachineService:
                 logger.info("Could not parse noise machine HREF: {}".format(nm["href"]))
 
     def __parse_noise_machines_from_url(self, url):
-        noise_gens = []
         o = urlparse(url)
-        if o.netloc != "mynoise.net":
-            return []
+        if (o.netloc != "mynoise.net"):
+            raise ValueError("Expected noise machine URL domain to be mynoise.net. Skipping")
+
+        noise_gens = []
         qs = parse_qsl(o.query)
         for param in qs:
             match = re.search(r"(.+\.php)", param[1])
@@ -51,12 +53,15 @@ class NoiseMachineService:
     def get_noise_machines(self, url):
         supergen_nms = []
         noise_machine_names = self.__parse_noise_machines_from_url(url)
+        undefined_machine_names = []
         for noise_machine_name in noise_machine_names:
             if noise_machine_name not in self.__noise_machines.keys():
                 logger.error("Couldn't find noise machine {}. Consider scraping title at url: {}".format(noise_machine_name, url))
                 # TODO: attempt scrape automatically?
+                undefined_machine_names.append(noise_machine_name)
             else:
                 nm = self.__noise_machines[noise_machine_name]
                 if (nm):
                     supergen_nms.append(nm)
-        return supergen_nms
+
+        return (supergen_nms, undefined_machine_names)

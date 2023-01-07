@@ -2,7 +2,6 @@ import re
 
 def findall(pattern, text):
     matches = re.findall(pattern, text)
-    # print(matches)
     print(len(matches))
     print(matches[0])
     print(".............")

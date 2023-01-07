@@ -15,7 +15,7 @@ import modules.linkParser as linkParser
 from classes.SupergenService import SupergenService
 
 script_dir = os.path.dirname(__file__)
-rel_input_path = '/data/redditPostData'
+rel_input_path = './data/redditPostData'
 rel_output_path = './data/output'
 post_input_path = os.path.join(script_dir, rel_input_path)
 output_path = os.path.join(script_dir, rel_output_path)
@@ -31,20 +31,18 @@ def __add_titled_match(match, submission):
     sg_svc.add(submission, title, url)
 
 def __parse_titled_matches(submission):
-    # TODO: Verify if any self-posts contain links that are NOT prefaced with "[some attempt at a title]""
     # some posts may have more than one valid supergen url, add each of them
     titled_matches = linkParser.find_all_titled_links(submission["selftext"])
     for titled_match in enumerate(titled_matches):
         __add_titled_match(titled_match, submission)
 
 def __add_untitled_url(url, submission, index, match_count):
-    is_single = len(match_count) == 1
+    is_single = match_count == 1
     post_title = submission["title"]
     link_title = post_title if is_single else "{} {}".format(post_title, str(index + 1))
     sg_svc.add(submission, link_title, url)
 
 def __parse_untitled_matches(submission):
-    # TODO: create pattern to match links without link text
     untitled_urls = linkParser.find_all_untitled_links(submission["selftext"])
     match_count = len(untitled_urls)
     for idx, untitled_url in enumerate(untitled_urls):
@@ -52,7 +50,7 @@ def __parse_untitled_matches(submission):
 
 def __parse_self_post(submission):
     __parse_titled_matches(submission)
-    #__parse_untitled_matches(submission)
+    __parse_untitled_matches(submission)
 
 def __parse_link(submission):
     sg_svc.add(submission, submission["title"], submission["url"])
@@ -63,18 +61,18 @@ def __parse_submissions(data):
         else: __parse_link(submission)
 
 def __process_files():
-    # path = "c:/dev/redditLinkScraper/data/redditPostData/"
     file_names = io.list_dir(post_input_path)
     for filename in file_names:
-        data = io.read_json(filename)
+        path = os.path.join(post_input_path, filename)
+        data = io.read_json(path)
         if (data): __parse_submissions(data)
 
 def __process_file():
-    data = io.read_json("c:/dev/redditLinkScraper/test.json")
+    data = io.read_json("c:/dev/redditLinkScraper/test-single.json")
     if (data): __parse_submissions(data)
 
 def main():
-    __process_file()
+    __process_files()
     sg_svc.save_all()
     print("fin")
 
