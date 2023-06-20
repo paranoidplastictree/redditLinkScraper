@@ -72,7 +72,7 @@ def __process_file():
     if (data): __parse_submissions(data)
 
 def main():
-    __process_files()
+    __process_file()
     sg_svc.save_all()
     print("fin")
 
