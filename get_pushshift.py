@@ -30,7 +30,7 @@ def get_url(before, after):
     size = 1000
     sort = 'desc'
     sort_type = 'created_utc'
-    fields = ['id', 'title', 'full_link', 'selftext', 'author', 'created_utc', 'is_self', 'url']
+    fields = ['id', 'title', 'full_link', 'selftext', 'author', 'created_utc', 'is_self', 'url', 'score']
     fields = ",".join(map(str,fields))
     pushshift_url = 'https://api.pushshift.io/reddit/search/submission/?subreddit={}&sort={}&sort_type={}&after={}&before={}&fields={}&size={}'
     return pushshift_url.format(subreddit, sort, sort_type, after, before, fields, size)
@@ -55,9 +55,18 @@ def fetch_data(start_utc, end_utc):
     print('saved to end_utc: ' + str(end_utc))
     return subs_found
 
-def get_all_submissions(start_utc):
+# def get_all_submissions(start_utc):
+    # total_subs = 0
+    # while start_utc >= FIRST_POST_CREATED_UTC:
+    #     end_utc = start_utc - TIME_SPAN
+    #     subs_found = fetch_data(start_utc, end_utc)        
+    #     total_subs += subs_found
+    #     start_utc = end_utc
+    # print(str(total_subs) + " total subs found")
+
+def get_all_submissions_in_range(start_utc, range_end_utc):
     total_subs = 0
-    while start_utc >= FIRST_POST_CREATED_UTC:
+    while start_utc >= range_end_utc:
         end_utc = start_utc - TIME_SPAN
         subs_found = fetch_data(start_utc, end_utc)        
         total_subs += subs_found
@@ -66,7 +75,10 @@ def get_all_submissions(start_utc):
     
 def main():
     start_seconds = int(time.time())
-    get_all_submissions(start_seconds)
+    # get_all_submissions_in_range(start_seconds, FIRST_POST_CREATED_UTC) #gets all subs since first post
+    last_known_post_utc = 1587785797
+    get_all_submissions_in_range(start_seconds, last_known_post_utc + 1)
+
     print('finished processing')
 
 main()

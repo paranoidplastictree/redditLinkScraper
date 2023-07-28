@@ -66,7 +66,7 @@ def __map_to_generator_info(nm_endpoint):
     }
 
 def __process_posts(post_data):
-    noise_machine_endpoints = set(list(nm for pd in post_data for nm in pd["undefined_noise_mahcines"]))
+    noise_machine_endpoints = set(list(nm for pd in post_data for nm in pd["undefined_noise_machines"]))
     # generate data in shape of noiseGeneratorInfo.json?
     noise_machines = list(map(__map_to_generator_info, list(noise_machine_endpoints)))
     dict = {

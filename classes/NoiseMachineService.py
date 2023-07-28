@@ -10,7 +10,7 @@ import re
 from urllib.parse import urlparse, parse_qsl
 
 # hydrated file is generated and hydrated by the supergen_scraper project
-ng_info_filename = "c:/dev/redditLinkScraper/data/noiseGeneratorInfo_hydrated.json"
+ng_info_filename = "c:/tim/paranoidplastictree/redditLinkScraper/data/noiseGeneratorInfo_hydrated.json"
 noise_machine_base_path = "https://mynoise.net/NoiseMachines/"
 
 class NoiseMachineService:
@@ -25,7 +25,8 @@ class NoiseMachineService:
         if not (data): logger.error("Could not load noise machine input file")
         
         pattern = r"((?i)(?<=(NoiseMachines\/)).+)"
-        for nm in data["noiseMachines"]:
+        #for nm in data["noiseMachines"]:
+        for nm in data:
             nm_name_match = re.search(pattern, nm["href"])
             # need to handle custom.php: [Can't Take The Sky From Me](https://mynoise.net/NoiseMachines/custom.php?l=3035403037323015253200&amp;m=CINEMATIC1~INTERGALACTIC1~BATTLE1~EASTASIA2~CINEMATIC3~CANYON5~EASTASIA6~CANYON7~EASTASIA7~CINEMATIC9&amp;d=0&amp;title=Can't%20Take%20The%20Sky%20From%20Me)",
             if (nm_name_match):

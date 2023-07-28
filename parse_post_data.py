@@ -68,7 +68,8 @@ def __process_files():
         if (data): __parse_submissions(data)
 
 def __process_file():
-    data = io.read_json("c:/dev/redditLinkScraper/test-single.json")
+    #data = io.read_json("c:/tim/paranoidplastictree/redditLinkScraper/test-single.json")
+    data = io.read_json("c:/tim/paranoidplastictree/redditLinkScraper/test.json")
     if (data): __parse_submissions(data)
 
 def main():

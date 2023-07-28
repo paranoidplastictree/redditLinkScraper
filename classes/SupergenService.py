@@ -10,7 +10,7 @@ from classes.NoiseMachineService import NoiseMachineService
 from classes.SupergenFactory import SupergenFactory
 from classes.SupergenRepository import SupergenRepository
 
-output_path = "c:/dev/redditLinkScraper/data/output/"
+output_path = "c:/tim/paranoidplastictree/redditLinkScraper/data/output/"
 nm_svc = NoiseMachineService()
 sg_factory = SupergenFactory()
 
@@ -33,11 +33,12 @@ class SupergenService:
             return
         except AssertionError as e:
             # Not all noise machine references were found in lookup/noseGeneratorInfo_hydrated.json
+            # Some (maybe all?) of these are legitimate and need to be added to the lookup.
             logger.error("{}: post Id: {} - {}".format(e, submission["id"], url))
             print("Post Id: {} - {} ".format(submission["id"], e))
             json = {
                 "post": submission,
-                "undefined_noise_mahcines": undefined_noise_machine_names
+                "undefined_noise_machines": undefined_noise_machine_names
             }
             io.write_dict(json, output_path, "posts_with_undefined_noise_machines.jsonl")
             return
